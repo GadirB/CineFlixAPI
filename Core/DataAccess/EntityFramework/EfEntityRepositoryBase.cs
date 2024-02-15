@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core.Entities;
+
+using Microsoft.EntityFrameworkCore;
 
 using System.Linq.Expressions;
 
