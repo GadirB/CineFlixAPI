@@ -21,8 +21,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="BusinessAspects\" />
+    <Folder Include="Concrete\" />
+    <Folder Include="ValidationRules\FluentValidation\" />
   </ItemGroup>
 
 </Project>
