@@ -8,7 +8,7 @@ public interface IGenreService
 {
     IDataResult<List<Genre>> GetAllGenres();
     IDataResult<Genre> GetGenreById(int genreId);
-    IDataResult<Genre> AddGenre();
-    IDataResult<Genre> UpdateGenre();
-    IDataResult<Genre> DeleteGenre();
+    IResult AddGenre(Genre genre);
+    IResult UpdateGenre(Genre genre);
+    IResult DeleteGenre(Genre genre);
 }

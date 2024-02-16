@@ -6,8 +6,8 @@ namespace Business.Abstract;
 
 public interface ICommentService
 {
-    IDataResult<Comment> AddComment();
+    IResult AddComment(Comment comment);
     IDataResult<List<Comment>> GetCommentsByMovieId(int movieId);
     IDataResult<List<Comment>> GetCommentsByUserID(int userId);
-    IDataResult<Comment> DeleteComment();
+    IResult DeleteComment(Comment comment);
 }
