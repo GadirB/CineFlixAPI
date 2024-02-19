@@ -1,6 +1,6 @@
 ﻿using Business.Abstract;
 
-using Entities;
+using Entities.Concrete;
 
 using Microsoft.AspNetCore.Mvc;
 

@@ -2,7 +2,7 @@
 
 using DataAccess.Abstract;
 
-using Entities;
+using Entities.Concrete;
 
 namespace DataAccess.Concrete;
 
