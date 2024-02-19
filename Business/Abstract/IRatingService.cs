@@ -6,9 +6,9 @@ namespace Business.Abstract;
 
 public interface IRatingService
 {
-    IDataResult<Rating> AddRating();
+    IResult AddRating(Rating rating);
     IDataResult<Rating> GetAverageRatingByMovieId(int movieId);
-    IDataResult<Rating> GetRatingByUserIdAndMovieId(int userId, int movieId);
-    IDataResult<Rating> UpdateRating();
-    IDataResult<Rating> DeleteRating();
+    IDataResult<List<Rating>> GetRatingByUserIdAndMovieId(int userId, int movieId);
+    IResult UpdateRating(Rating rating);
+    IResult DeleteRating(Rating rating);
 }

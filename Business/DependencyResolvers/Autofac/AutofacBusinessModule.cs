@@ -32,6 +32,9 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<SeriesManager>().As<ISeriesService>().SingleInstance();
         builder.RegisterType<EfSeriesDal>().As<ISeriesDal>().SingleInstance();
 
+        builder.RegisterType<RatingManager>().As<IRatingService>().SingleInstance();
+        builder.RegisterType<EfRatingDal>().As<IRatingDal>().SingleInstance();
+
 
         var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
