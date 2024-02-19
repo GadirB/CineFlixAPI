@@ -8,9 +8,9 @@ public interface ISeriesService
 {
     IDataResult<List<Series>> GetAllSeries();
     IDataResult<Series> GetSeriesById(int seriesId);
-    IDataResult<Series> GetSeriesByGenre(int genreId);
-    IDataResult<Series> AddSeries();
-    IDataResult<Series> UpdateSeries();
-    IDataResult<Series> DeleteSeries();
+    IDataResult<List<Series>> GetSeriesByGenre(int genreId);
+    IResult AddSeries(Series series);
+    IResult UpdateSeries(Series series);
+    IResult DeleteSeries(Series series);
 
 }

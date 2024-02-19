@@ -29,6 +29,8 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<MovieManager>().As<IMovieService>().SingleInstance();
         builder.RegisterType<EfMovieDal>().As<IMovieDal>().SingleInstance();
 
+        builder.RegisterType<SeriesManager>().As<ISeriesService>().SingleInstance();
+        builder.RegisterType<EfSeriesDal>().As<ISeriesDal>().SingleInstance();
 
 
         var assembly = System.Reflection.Assembly.GetExecutingAssembly();

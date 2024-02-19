@@ -10,7 +10,7 @@ public partial class Movie : IEntity
 
     public string? Description { get; set; }
 
-    public DateTime? ReleaseDate { get; set; }
+    public DateOnly? ReleaseDate { get; set; }
 
     public int? GenreId { get; set; }
 
