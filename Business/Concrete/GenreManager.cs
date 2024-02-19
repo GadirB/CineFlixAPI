@@ -9,11 +9,11 @@ using Entities;
 
 namespace Business.Concrete;
 
-public class GenreService : IGenreService
+public class GenreManager : IGenreService
 {
     IGenreDal _genreDal;
 
-    public GenreService(IGenreDal genreDal)
+    public GenreManager(IGenreDal genreDal)
     {
         _genreDal = genreDal;
     }
@@ -48,7 +48,7 @@ public class GenreService : IGenreService
 
     public IDataResult<List<Genre>> GetAllGenres()
     {
-        return new SuccessDataResult<List<Genre>>(_genreDal.GetAll(), Messages.GenreListed);
+        return new SuccessDataResult<List<Genre>>(_genreDal.GetAll());
     }
 
     public IDataResult<Genre> GetGenreById(int genreId)

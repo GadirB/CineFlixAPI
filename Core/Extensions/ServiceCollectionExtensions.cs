@@ -1,4 +1,4 @@
-﻿using Core.Dependency_Resolvers;
+﻿using Core.DependencyResolvers;
 using Core.Utilities.IoC;
 
 using Microsoft.Extensions.DependencyInjection;

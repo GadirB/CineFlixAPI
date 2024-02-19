@@ -14,5 +14,5 @@ public partial class Series : IEntity
 
     public int? GenreId { get; set; }
 
-    public virtual Genre? Genre { get; set; }
+    //public virtual Genre? Genre { get; set; }
 }

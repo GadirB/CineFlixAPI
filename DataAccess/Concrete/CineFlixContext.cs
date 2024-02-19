@@ -42,13 +42,13 @@ public partial class CineFlixContext : DbContext
             entity.Property(e => e.MovieId).HasColumnName("movieId");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
-            entity.HasOne(d => d.Movie).WithMany(p => p.Comments)
-                .HasForeignKey(d => d.MovieId)
-                .HasConstraintName("FK_Comments_Movies");
+            //entity.HasOne(d => d.Movie).WithMany(p => p.Comments)
+            //    .HasForeignKey(d => d.MovieId)
+            //    .HasConstraintName("FK_Comments_Movies");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Comments)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK_Comments_Users");
+            //entity.HasOne(d => d.User).WithMany(p => p.Comments)
+            //    .HasForeignKey(d => d.UserId)
+            //    .HasConstraintName("FK_Comments_Users");
         });
 
         modelBuilder.Entity<Genre>(entity =>
@@ -65,13 +65,13 @@ public partial class CineFlixContext : DbContext
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.GenreId).HasColumnName("genreId");
             entity.Property(e => e.ReleaseDate)
-                .HasColumnType("datetime")
+                .HasColumnType("date")
                 .HasColumnName("releaseDate");
             entity.Property(e => e.Title).HasColumnName("title");
 
-            entity.HasOne(d => d.Genre).WithMany(p => p.Movies)
-                .HasForeignKey(d => d.GenreId)
-                .HasConstraintName("FK_Movies_Genres");
+            //entity.HasOne(d => d.Genre).WithMany(p => p.Movies)
+            //    .HasForeignKey(d => d.GenreId)
+            //    .HasConstraintName("FK_Movies_Genres");
         });
 
         modelBuilder.Entity<Rating>(entity =>
@@ -83,13 +83,13 @@ public partial class CineFlixContext : DbContext
                 .HasColumnName("ratingValue");
             entity.Property(e => e.UserId).HasColumnName("userId");
 
-            entity.HasOne(d => d.Movie).WithMany(p => p.Ratings)
-                .HasForeignKey(d => d.MovieId)
-                .HasConstraintName("FK_Ratings_Movies");
+            //entity.HasOne(d => d.Movie).WithMany(p => p.Ratings)
+            //    .HasForeignKey(d => d.MovieId)
+            //    .HasConstraintName("FK_Ratings_Movies");
 
-            entity.HasOne(d => d.User).WithMany(p => p.Ratings)
-                .HasForeignKey(d => d.UserId)
-                .HasConstraintName("FK_Ratings_Users");
+            //entity.HasOne(d => d.User).WithMany(p => p.Ratings)
+            //    .HasForeignKey(d => d.UserId)
+            //    .HasConstraintName("FK_Ratings_Users");
         });
 
         modelBuilder.Entity<Series>(entity =>
@@ -98,13 +98,13 @@ public partial class CineFlixContext : DbContext
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.GenreId).HasColumnName("genreId");
             entity.Property(e => e.ReleaseDate)
-                .HasColumnType("datetime")
+                .HasColumnType("date")
                 .HasColumnName("releaseDate");
             entity.Property(e => e.Title).HasColumnName("title");
 
-            entity.HasOne(d => d.Genre).WithMany(p => p.Series)
-                .HasForeignKey(d => d.GenreId)
-                .HasConstraintName("FK_Series_Genres");
+            //entity.HasOne(d => d.Genre).WithMany(p => p.Series)
+            //    .HasForeignKey(d => d.GenreId)
+            //    .HasConstraintName("FK_Series_Genres");
         });
 
         modelBuilder.Entity<User>(entity =>

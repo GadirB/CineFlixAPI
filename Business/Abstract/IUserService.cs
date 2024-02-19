@@ -6,9 +6,9 @@ namespace Business.Abstract;
 
 public interface IUserService
 {
-    IDataResult<User> RegisterUser();
-    IDataResult<User> LoginUser();
+    IResult RegisterUser(User user);
+    IResult LoginUser(string username, string password);
     IDataResult<User> GetUserById(int userId);
-    IDataResult<User> UpdateUser();
-    IDataResult<User> DeleteUser();
+    IResult UpdateUser(User user);
+    IResult DeleteUser(User user);
 }

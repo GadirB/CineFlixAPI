@@ -8,7 +8,7 @@ public partial class Genre : IEntity
 
     public string? Name { get; set; }
 
-    public virtual ICollection<Movie> Movies { get; set; } = new List<Movie>();
+    //public virtual ICollection<Movie> Movies { get; set; } = new List<Movie>();
 
-    public virtual ICollection<Series> Series { get; set; } = new List<Series>();
+    //public virtual ICollection<Series> Series { get; set; } = new List<Series>();
 }

@@ -14,9 +14,9 @@ public partial class Movie : IEntity
 
     public int? GenreId { get; set; }
 
-    public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
+    //public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
-    public virtual Genre? Genre { get; set; }
+    //public virtual Genre? Genre { get; set; }
 
-    public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
+    //public virtual ICollection<Rating> Ratings { get; set; } = new List<Rating>();
 }
