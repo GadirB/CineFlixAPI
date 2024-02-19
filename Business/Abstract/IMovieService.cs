@@ -8,8 +8,8 @@ public interface IMovieService
 {
     IDataResult<List<Movie>> GetAllMovies();
     IDataResult<Movie> GetMovieById(int movieId);
-    IDataResult<Movie> GetMovieByGenre(int genreId);
-    IDataResult<Movie> AddMovie();
-    IDataResult<Movie> UpdateMovie();
-    IDataResult<Movie> DeleteMovie();
+    IDataResult<List<Movie>> GetMovieByGenre(int genreId);
+    IResult AddMovie(Movie movie);
+    IResult UpdateMovie(Movie movie);
+    IResult DeleteMovie(Movie movie);
 }
